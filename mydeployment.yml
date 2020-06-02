@@ -1,0 +1,17 @@
+kind: Deployment
+metadata:
+  name: task3-deploy
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      env: india
+template:
+  metadata:
+     name: task3-pod
+     labels:
+       env: india
+  spec:
+    containers:
+    - name: task3-con
+      image: 1398abhisingh911/kube:v1
